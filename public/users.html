@@ -1,34 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Users - XYZ Application</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="css/all.css"> <!-- Ensure this path is correct -->
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/all.css" />
+    <!-- Ensure this path is correct -->
+  </head>
+  <body>
     <header>
-        <div class="logo-section">
-            <img src="logo.png" alt="Site Logo" id="site-logo">
-            <h1>XYZ Application</h1>
-        </div>
-        <nav>
-            <a href="index.html" id="home"><i class="fas fa-home"></i> Home</a>
-            <a href="users.html" id="users"><i class="fas fa-users"></i> Users</a>
-            <a href="profile.html" id="profile">MyProfile</a>
-            <a href="#" id="signout" onclick="signOut()">SignOut</a>
-            <a href="signup.html" id="signup">SignUp</a>
-            <a href="signin.html" id="signin">SignIn</a>
-        </nav>
+      <div class="logo-section">
+        <img src="logo.png" alt="Site Logo" id="site-logo" />
+        <h1>XYZ Application</h1>
+      </div>
+      <nav>
+        <a href="index.html" id="home"><i class="fas fa-home"></i> Home</a>
+        <a href="users.html" id="users"><i class="fas fa-users"></i> Users</a>
+        <a href="profile.html" id="profile">MyProfile</a>
+        <a href="#" id="signout" onclick="signOut()">SignOut</a>
+        <a href="signup.html" id="signup">SignUp</a>
+        <a href="signin.html" id="signin">SignIn</a>
+      </nav>
     </header>
     <main>
-        <div class="users-section">
-            <h2>All Users</h2>
-        </div>
-        <section id="user-list" class="user-list">
-          
-        </section>
+      <div class="users-section">
+        <h2>All Users</h2>
+      </div>
+      <section id="user-list" class="user-list"></section>
     </main>
     <script src="users.js"></script>
-</body>
+  </body>
 </html>

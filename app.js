@@ -1,9 +1,9 @@
-require('dotenv').config(); // Load environment variables
+require("dotenv").config(); // Load environment variables
 
-const express = require('express');
-const mongoose = require('mongoose');
-const cors = require('cors');
-const path = require('path');
+const express = require("express");
+const mongoose = require("mongoose");
+const cors = require("cors");
+const path = require("path");
 
 const app = express();
 app.use(cors());
@@ -11,20 +11,21 @@ app.use(express.json());
 
 // MongoDB connection
 const uri = process.env.MONGODB_URI;
-mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log('MongoDB connected'))
-  .catch(err => console.log('Error connecting to MongoDB:', err));
+mongoose
+  .connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log("MongoDB connected"))
+  .catch((err) => console.log("Error connecting to MongoDB:", err));
 
 // Serve static files from the public directory
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, "public")));
 
 // Import routes
-const userRoutes = require('./routes/userRoutes');
-app.use('/api', userRoutes);
+const userRoutes = require("./routes/userRoutes");
+app.use("/api", userRoutes);
 
 // Define a simple route
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
 // Start server
