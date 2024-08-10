@@ -129,6 +129,7 @@ header + main {
   display: flex;
   flex-direction: row;
   width: 100%;
+  /* flex-wrap: wrap; */
   /* border: 1px solid green; */
 }
 
@@ -191,9 +192,13 @@ header + main {
 
 .user-list {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   padding: 0;
   list-style-type: none;
+  /* border: 1px solid red; */
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .user-item {
@@ -204,23 +209,37 @@ header + main {
   background-color: #ffffff;
   border: 1px solid #ccc;
   border-radius: 5px;
+  width: 47%;
 }
 
 .user-item i {
   font-size: 24px;
   margin-right: 10px;
+  /* width:50%; */
 }
 
 .user-item span {
   font-size: 18px;
+  /* border:1px solid green; */
 }
 
 @media (max-width: 768px) {
-  nav {
+  /* nav {
     justify-content: center;
-  }
+  } */
 
-  nav a {
+  /* nav a {
     margin: 5px 10px;
-  }
+  } */
+}
+
+@media (max-width: 500px) {
+  /* .sign-image-container {
+    background-color: red;
+    display: none;
+  } */
+}
+
+.users-section h2 {
+  font-weight: bold;
 }
